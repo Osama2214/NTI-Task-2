@@ -294,6 +294,7 @@
     </a>
 
     <script>
+      // Scroll to Top Button Visibility
       const scrollUpBtn = document.getElementById('scroll-up-btn');
       window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
@@ -301,6 +302,16 @@
         } else {
           scrollUpBtn.classList.remove('show');
         }
+      });
+
+      // Close Mobile Menu on Link Click
+      const menuToggle = document.getElementById('menu-toggle');
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (menuToggle) {
+            menuToggle.checked = false;
+          }
+        });
       });
     </script>
   </body>
